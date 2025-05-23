@@ -14,6 +14,7 @@
   <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 </head>
 <body>
 
@@ -67,7 +68,51 @@
 			</svg>
 		</div>
 	</div>
+
+	<div class="info-section">
+		<div id="location-info" class="info-section-item">
+			<h2>Location</h2>
+			<div id="location-loader" class="loader" style="display: none;">Loading Location...</div>
+			<div id="map" style="height: 300px; width: 100%;"></div>
+			<p id="location-details">Coordinates: N/A | Accuracy: N/A</p>
+			<p id="altitude">Altitude: N/A</p>
+			<p id="altitudeAccuracy">Altitude Accuracy: N/A</p>
+			<p id="heading">Heading: N/A</p>
+			<p id="speed">Speed: N/A</p>
+			<p id="timestamp">Timestamp: N/A</p>
+		</div>
+		<div id="weather-info">
+			<h2>Weather</h2>
+			<p id="weather-summary">Summary: N/A</p>
+			<p id="weather-temperature">Temperature: N/A</p>
+			<p id="weather-humidity">Humidity: N/A</p>
+			<p id="weather-wind-speed">Wind Speed: N/A</p>
+			<p id="weather-visibility">Visibility: N/A</p>
+			<p id="weather-pressure">Pressure: N/A</p>
+		</div>
+		<div id="navigator-info">
+			<h2>Navigator Info</h2>
+			<p id="appCodeName">App Code Name: N/A</p>
+			<p id="appName">App Name: N/A</p>
+			<p id="appVersion">App Version: N/A</p>
+			<p id="cookieEnabled">Cookie Enabled: N/A</p>
+			<p id="language">Language: N/A</p>
+			<p id="onLine">Online: N/A</p>
+			<p id="platform">Platform: N/A</p>
+			<p id="product">Product: N/A</p>
+			<p id="userAgent">User Agent: N/A</p>
+		</div>
+		<div id="bluetooth-info" class="info-section-item">
+			<h2>Bluetooth Devices</h2>
+			<button id="scanBluetoothButton">Scan for Devices</button>
+			<ul id="bluetoothDeviceList">
+				<!-- Devices will be listed here -->
+			</ul>
+			<p id="bluetoothStatus">Status: Idle</p>
+		</div>
+	</div>
 </div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="script.js"></script>
 </body>
 </html>

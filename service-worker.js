@@ -1,9 +1,16 @@
-var cacheName = 'batteryapppwa-0.1';
+var cacheName = 'batteryapppwa-0.2'; // Incremented version
 var filesToCache = [
   '/',
   '/index.html',
-  '/scripts/script.js',
-  '/styles/style.css'
+  '/script.js',
+  '/style.css',
+  'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
+  'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',
+  '/images/icons/icon-128x128.png',
+  '/images/icons/icon-144x144.png',
+  '/images/icons/icon-152x152.png',
+  '/images/icons/icon-192x192.png',
+  '/images/icons/icon-256x256.png'
 ];
 
 

@@ -41,3 +41,138 @@ body{
 .p10{
 	padding: 10px;
 }
+
+.info-section {
+	display: flex;
+	flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+	justify-content: space-around; /* Distribute sections evenly */
+	width: 100%;
+	max-width: 900px; /* Max width for larger screens */
+	margin: 20px auto; /* Center the section and add some margin */
+	padding: 10px;
+	color: #d0d0d0; /* Lighter text color for readability */
+}
+
+.info-section > div {
+	background-color: #3b3a4a; /* Slightly lighter background for sections */
+	border-radius: 8px; /* Rounded corners */
+	padding: 15px;
+	margin: 10px; /* Margin between sections */
+	flex-grow: 1; /* Allow sections to grow */
+	min-width: 250px; /* Minimum width before wrapping */
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+.info-section h2 {
+	color: #e0e0e0; /* Bright color for titles */
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 15px;
+	font-size: 1.5em; /* Larger font for titles */
+	border-bottom: 1px solid #555; /* Separator line */
+	padding-bottom: 10px;
+}
+
+.info-section p {
+	color: #c0c0c0; /* Slightly muted paragraph text */
+	font-size: 0.9em;
+	line-height: 1.6;
+	margin-bottom: 8px;
+}
+
+/* Specific styling for individual info sections if needed in future */
+/* #location-info {} */
+/* #weather-info {} */
+/* #navigator-info {} */
+
+#bluetooth-info {
+    /* Similar to other .info-section-item if you used that class */
+    background-color: #3f4a52; /* Example color */
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#bluetooth-info h2 {
+    color: #adf; /* Example color */
+    text-align: center;
+    border-bottom: 1px solid #567;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#scanBluetoothButton {
+    display: block;
+    margin: 0 auto 15px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#scanBluetoothButton:hover {
+    background-color: #0056b3;
+}
+
+#scanBluetoothButton:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+#bluetoothDeviceList {
+    list-style: none;
+    padding: 0;
+    max-height: 200px; /* Example max height */
+    overflow-y: auto; /* Scroll if many devices */
+}
+
+#bluetoothDeviceList li {
+    background-color: #4a5568; /* Darker list item */
+    color: #e2e8f0;       /* Light text */
+    padding: 8px 12px;
+    border-bottom: 1px solid #2d3748; /* Separator */
+    border-radius: 4px;
+    margin-bottom: 5px;
+    transition: opacity 0.5s ease-in-out; /* For fade-in */
+}
+
+#bluetoothDeviceList li:last-child {
+    border-bottom: none;
+}
+
+#bluetoothStatus {
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+    color: #bbb; /* Lighter status text */
+}
+
+.loader {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 10px auto; /* Center it */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#bluetoothStatus.scanning {
+    /* Example: Add a subtle animation or change appearance */
+    animation: pulseText 1.5s infinite;
+}
+
+@keyframes pulseText {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
